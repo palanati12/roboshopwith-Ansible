@@ -27,7 +27,7 @@
   - name: extract user application 
     ansible.builtin.unarchive:
       src: /tmp/user.zip
-      dest: /tmp
+      dest: /app
       remote_src: yes
 
   - name: Install dependencies
@@ -58,7 +58,7 @@
     ansible.builtin.command:  mongo --host mongodb.praveenapp.online --quiet --eval 'db = db.getSiblingDB("user"); db.products.count()'
     register: product_count  
 
-  - name: load catalogue data
+  - name: load user data
     ansible.builtin.command: mongo --host mongodb.praveenapp.online < /app/schema/user.js
     when: product_count.stdout == 0 
 
