@@ -21,7 +21,7 @@
 
   - name: download the user file in app directory
     ansible.builtin.get_url:
-      url: /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip 
+      url: https://roboshop-builds.s3.amazonaws.com/user.zip 
       dest: /tmp  
 
   - name: extract user application 

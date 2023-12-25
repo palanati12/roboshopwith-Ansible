@@ -21,7 +21,7 @@
 
   - name: download the file in the directory
     ansible.builtin.get_url:
-      url: /tmp/cart.zip https://roboshop-builds.s3.amazonaws.com/cart.zip
+      url: https://roboshop-builds.s3.amazonaws.com/cart.zip
       dest: /tmp
 
   - name: extract catalogue application
