@@ -1,5 +1,5 @@
 - name: user
-  host: user
+  hosts: user
   become: yes
   tasks:
   - name: diable old nodejs and enable new nodejs]
