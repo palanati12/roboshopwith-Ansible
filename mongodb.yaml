@@ -13,7 +13,7 @@
        state: present
 
   -  name: start and enable momgodb
-     ansible.buitin.service:
+     ansible.builtin.service:
        name: mongod
        state: started
        enable: yes  
