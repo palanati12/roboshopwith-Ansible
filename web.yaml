@@ -24,7 +24,7 @@
 
   - name: extract web application
     ansible.builtin.unarchive:
-      src: unzip /tmp/web.zip
+      src: /tmp/web.zip
       dest: /usr/share/nginx/html
       remote_src: yes
 
