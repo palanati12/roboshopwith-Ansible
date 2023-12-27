@@ -59,7 +59,7 @@
     register: users_count  
 
   - name: load user data
-    ansible.builtin.command: mongo --host mongodb.praveenapp.online < /app/schema/user.js
+    ansible.builtin.shell: "mongo --host mongodb.praveenapp.online < /app/schema/user.js"
     when: users_count.stdout == 0 
 
   - name: start and enable cart
